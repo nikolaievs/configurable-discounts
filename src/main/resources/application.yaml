@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: configurable-discounts
+  liquibase:
+    change-log: classpath:/db/changelog/changelog.xml
+    default-schema: discounts
+    driver-class-name: org.postgresql.Driver
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: ${DB_USER:owner}
+    password: ${DB_USER_PWD:owner_pwd}
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/postgres?currentSchema=discounts}
