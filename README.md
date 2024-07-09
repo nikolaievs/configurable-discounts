@@ -20,8 +20,14 @@ Then wait until DB will be up and running, after that application will start and
 <i>Note:</i> Or you can just open `docker-compose.yml` and start all services.<br>
 
 ## How to test
-Once you run the application you can simply call rest endpoints. E.g: `http://localhost:8080/api/v1/products/b0fa9f81-4f43-4d67-b84c-6a8ecf80e7cf`
+Once you run the application you can simply call rest endpoints. E.g: `GET http://localhost:8080/api/v1/products/b0fa9f81-4f43-4d67-b84c-6a8ecf80e7cf`
+<br>
+Sample request for calculate discounts: `GET http://localhost:8080/api/v1/discounts?product_id=b0fa9f81-4f43-4d67-b84c-6a8ecf80e7cf&product_quantity=10`
 
 <i>Note:</i> Request above will return 404 response because DB does not have any data in it. Everything is tested by unit and integration tests. <br>
 See `src/test` folder for unit tests. <br>
 See `src/integrationTest` folder for integration tests.<br>
+
+## Discounts configuration
+
+Discounts configurations located in `discounts.yaml` file.

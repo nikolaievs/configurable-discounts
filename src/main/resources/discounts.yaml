@@ -1,0 +1,6 @@
+discounts:
+  - type: COUNT_BASED
+    productsQuantity: 10
+    value: 5.1
+  - type: PERCENTAGE_BASED
+    value: 5

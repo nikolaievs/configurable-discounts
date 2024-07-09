@@ -10,8 +10,6 @@ data class GetProductResponse(
     val price: BigDecimal
 ) {
     companion object {
-        fun from(product: Product): GetProductResponse = GetProductResponse(
-            product.id, product.name, product.price
-        )
+        fun from(product: Product) = GetProductResponse(product.id, product.name, product.price)
     }
 }
